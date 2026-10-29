@@ -1,0 +1,449 @@
+<!-- ==========================================================================
+   AUTOR: Juan Esteban Bejarano Hernández
+   FECHA: 10/07/2026
+   DESCRIPCIÓN: Buscador avanzado de servicios locativos para clientes.
+   ========================================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Buscador de Servicios</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <h1>Rental Service Marketplace</h1>
+
+    <nav class="main-nav" aria-label="Navegación entre pantallas del prototipo">
+
+        <ul>
+
+            <li><a href="index.html">Portada</a></li>
+
+            <li><a href="login.html">Autenticación</a></li>
+
+            <li><a href="buscador.html" class="active">Buscador de Servicios</a></li>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <li><a href="perfil.html">Perfil del Proveedor</a></li>
+
+            <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+
+            <li><a href="pagos.html">Pagos / Checkout</a></li>
+
+            <li><a href="calificacion.html">Calificación</a></li>
+
+            <li><a href="admin.html">Administración</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="search-container">
+
+    <section class="search-banner">
+
+        <h2>Encuentra el profesional ideal para tu hogar</h2>
+
+        <p>
+            Busca servicios locativos de forma rápida, compara proveedores,
+            revisa sus calificaciones y elige la mejor opción.
+        </p>
+
+    </section>
+
+    <section class="surface-card search-box">
+
+        <h3>Buscar servicio</h3>
+
+        <form>
+
+            <div class="search-input-group">
+
+                <input
+                    type="text"
+                    class="text-field"
+                    placeholder="¿Qué servicio necesitas?">
+
+                <button
+                    type="submit"
+                    class="btn-filled">
+                    Buscar
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- ==========================================================
+         Categorías
+    =========================================================== -->
+
+    <section class="categories-section">
+
+        <h3>Categorías</h3>
+
+        <div class="categories-list">
+
+            <button type="button" class="category-item">
+                🔧
+                <span>Plomería</span>
+            </button>
+
+            <button type="button" class="category-item">
+                ⚡
+                <span>Electricidad</span>
+            </button>
+
+            <button type="button" class="category-item">
+                🎨
+                <span>Pintura</span>
+            </button>
+
+            <button type="button" class="category-item">
+                🪵
+                <span>Carpintería</span>
+            </button>
+
+            <button type="button" class="category-item">
+                🧹
+                <span>Limpieza</span>
+            </button>
+
+            <button type="button" class="category-item">
+                🌳
+                <span>Jardinería</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         Filtros
+    =========================================================== -->
+
+    <section class="surface-card filters-card">
+
+        <h3>Filtros de búsqueda</h3>
+
+        <div class="filters-grid">
+
+            <div class="form-group">
+
+                <label for="city">
+                    Ciudad
+                </label>
+
+                <select id="city" class="text-field">
+                    <option value="">Todas las ciudades</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Barranquilla">Barranquilla</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="price">
+
+                    Precio máximo
+
+                </label>
+
+                <select id="price" class="text-field">
+                    <option value="">Cualquier precio</option>
+                    <option value="50000">Hasta $50.000</option>
+                    <option value="100000">Hasta $100.000</option>
+                    <option value="150000">Hasta $150.000</option>
+                    <option value="200000">Hasta $200.000</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="rating">
+
+                    Calificación mínima
+
+                </label>
+
+                <select id="rating" class="text-field">
+                    <option value="">Cualquier calificación</option>
+                    <option value="5">5 estrellas</option>
+                    <option value="4">4 estrellas o más</option>
+                    <option value="3">3 estrellas o más</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================================
+         Resultados
+    =========================================================== -->
+
+    <section class="results-section">
+
+        <h2>
+
+            Servicios disponibles
+
+        </h2>
+
+        <div class="services-grid">
+
+
+            <!-- Tarjeta 1 -->
+
+            <article class="surface-card service-card">
+
+                <div class="service-image">
+
+                    🔧
+
+                </div>
+
+                <div class="service-content">
+
+                    <h3>
+
+                        Plomería Residencial
+
+                    </h3>
+
+                    <p>
+
+                        Reparación de fugas, instalación de griferías y mantenimiento general.
+
+                    </p>
+
+                    <div class="service-info">
+
+                        <span>👤 Luis Ramirez</span>
+
+                        <span>📍 Bogotá</span>
+
+                    </div>
+
+                    <div class="service-rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <small>(4.9)</small>
+
+                    </div>
+
+                    <div class="service-footer">
+
+                        <strong>$90.000</strong>
+
+                        <button type="button" class="btn-filled" data-service-details>
+
+                            Ver detalles
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+                        <!-- Tarjeta 2 -->
+
+            <article class="surface-card service-card">
+
+                <div class="service-image">
+                    ⚡
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Electricista Certificado</h3>
+
+                    <p>
+                        Instalación de redes eléctricas, tomas,
+                        iluminación LED y mantenimiento preventivo.
+                    </p>
+
+                    <div class="service-info">
+                        <span>👤 Andrés Ramírez</span>
+                        <span>📍 Medellín</span>
+                    </div>
+
+                    <div class="service-rating">
+                        ⭐⭐⭐⭐⭐
+                        <small>(5.0)</small>
+                    </div>
+
+                    <div class="service-footer">
+
+                        <strong>$120.000</strong>
+
+                        <button type="button" class="btn-filled" data-service-details>
+                            Ver detalles
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Tarjeta 3 -->
+
+            <article class="surface-card service-card">
+
+                <div class="service-image">
+                    🎨
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Pintor Profesional</h3>
+
+                    <p>
+                        Pintura interior y exterior,
+                        impermeabilización y acabados decorativos.
+                    </p>
+
+                    <div class="service-info">
+
+                        <span>👤 Laura Martínez</span>
+
+                        <span>📍 Cali</span>
+
+                    </div>
+
+                    <div class="service-rating">
+
+                        ⭐⭐⭐⭐☆
+
+                        <small>(4.7)</small>
+
+                    </div>
+
+                    <div class="service-footer">
+
+                        <strong>$85.000</strong>
+
+                        <button type="button" class="btn-filled" data-service-details>
+
+                            Ver detalles
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Tarjeta 4 -->
+
+            <article class="surface-card service-card">
+
+                <div class="service-image">
+                    🧹
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Servicio de Limpieza</h3>
+
+                    <p>
+                        Limpieza profunda para hogares,
+                        apartamentos y oficinas.
+                    </p>
+
+                    <div class="service-info">
+
+                        <span>👤 Diana González</span>
+
+                        <span>📍 Bogotá</span>
+
+                    </div>
+
+                    <div class="service-rating">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <small>(4.9)</small>
+
+                    </div>
+
+                    <div class="service-footer">
+
+                        <strong>$70.000</strong>
+
+                        <button type="button" class="btn-filled" data-service-details>
+
+                            Ver detalles
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+        <p id="no-results" class="empty-state" hidden>No encontramos servicios con esos criterios. Cambia la búsqueda o los filtros.</p>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        &copy; 2026 Rental Service Marketplace.
+        Todos los derechos reservados.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#privacidad">Privacidad</a>
+
+        <a href="#terminos">Términos</a>
+
+        <a href="#ayuda">Ayuda</a>
+
+    </div>
+
+</footer>
+
+<script src="app.js"></script>
+</body>
+
+</html>

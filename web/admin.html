@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Administración</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Rental Service Marketplace</h1>
+        <nav class="main-nav" aria-label="Navegación del prototipo">
+            <ul>
+                <li><a href="index.html">Portada</a></li>
+                <li><a href="login.html">Autenticación</a></li>
+                <li><a href="buscador.html">Buscador de Servicios</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="perfil.html">Perfil del Proveedor</a></li>
+                <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+                <li><a href="pagos.html">Pagos / Checkout</a></li>
+                <li><a href="calificacion.html">Calificación</a></li>
+                <li><a href="admin.html" class="active">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="search-banner">
+            <h2>Administración del marketplace</h2>
+            <p>Controla usuarios, servicios y revisiones desde este panel.</p>
+        </section>
+
+        <section class="summary-grid">
+            <article class="summary-card surface-card">
+                <p class="summary-label">Proveedores</p>
+                <h3 data-admin-providers>248</h3>
+                <span class="status-chip chip-success">Registrados en este navegador</span>
+            </article>
+            <article class="summary-card surface-card">
+                <p class="summary-label">Clientes activos</p>
+                <h3 data-admin-clients>0</h3>
+                <span class="status-chip chip-info">Registrados en este navegador</span>
+            </article>
+            <article class="summary-card surface-card">
+                <p class="summary-label">Servicios</p>
+                <h3 data-admin-services>652</h3>
+                <span class="status-chip chip-warning">Publicados en este navegador</span>
+            </article>
+            <article class="summary-card surface-card">
+                <p class="summary-label">Incidencias</p>
+                <h3>0</h3>
+                <span class="status-chip chip-success">Sin incidencias registradas</span>
+            </article>
+        </section>
+
+        <section class="surface-card profile-card">
+            <h3>Configurar plataforma</h3>
+            <form id="system-form">
+                <div class="form-group">
+                    <label for="maintenance">Estado del sistema</label>
+                    <select id="maintenance" class="text-field">
+                        <option>Operativo</option>
+                        <option>Mantenimiento programado</option>
+                        <option>Solo lectura</option>
+                    </select>
+                </div>
+                <p id="current-system-status" class="status-chip chip-info"></p>
+                <button type="submit" class="btn-filled">Guardar configuración</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rental Service Marketplace. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#privacidad">Privacidad</a>
+            <a href="#terminos">Términos</a>
+            <a href="#ayuda">Ayuda</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!-- ==========================================================================
+   AUTOR: Jhon fredy quiroz gomez
+   FECHA: 12/07/2026
+   DESCRIPCIÓN:  Dashboard de Control de Servicios.
+   ========================================================================== -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Rental Service Marketplace</h1>
+        <nav class="main-nav" aria-label="Navegación del prototipo">
+            <ul>
+                <li><a href="index.html">Portada</a></li>
+                <li><a href="login.html">Autenticación</a></li>
+                <li><a href="buscador.html">Buscador de Servicios</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="perfil.html">Perfil del Proveedor</a></li>
+                <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+                <li><a href="pagos.html">Pagos / Checkout</a></li>
+                <li><a href="calificacion.html">Calificación</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <section class="dashboard-shell">
+            <aside class="dashboard-sidebar surface-card">
+                <div class="sidebar-brand">
+                    <div class="sidebar-logo">RS</div>
+                    <div>
+                        <h2>Panel de control</h2>
+                        <p>Gestión integral del servicio</p>
+                    </div>
+                </div>
+
+                <nav class="sidebar-nav" aria-label="Navegación lateral">
+                    <a href="#resumen" class="active">Resumen</a>
+                    <a href="#reservas">Reservas</a>
+                    <a href="#solicitudes">Solicitudes</a>
+                    <a href="pagos.html">Pagos / reservas</a>
+                    <a href="#reportes">Reportes</a>
+                </nav>
+
+                <div class="sidebar-card">
+                    <p class="label">Trazabilidad</p>
+                    <h3>RF-02</h3>
+                    <p>Administración y consulta ágil de reservas.</p>
+                </div>
+            </aside>
+
+            <div class="dashboard-content">
+                <section class="summary-grid" id="resumen">
+                    <article class="summary-card surface-card">
+                        <p class="summary-label">Reservas activas</p>
+                        <h3 data-booking-count>0</h3>
+                        <span class="status-chip chip-success">Solicitudes guardadas aquí</span>
+                    </article>
+                    <article class="summary-card surface-card">
+                        <p class="summary-label">Solicitudes pendientes</p>
+                        <h3 data-booking-pending>0</h3>
+                        <span class="status-chip chip-warning">Por atender</span>
+                    </article>
+                    <article class="summary-card surface-card">
+                        <p class="summary-label">Ingresos del mes</p>
+                        <h3>No disponible</h3>
+                        <span class="status-chip chip-info">Esta demostración no procesa pagos</span>
+                    </article>
+                    <article class="summary-card surface-card">
+                        <p class="summary-label">Respuesta promedio</p>
+                        <h3>Sin datos</h3>
+                        <span class="status-chip chip-success">Se actualizará con reservas reales</span>
+                    </article>
+                </section>
+                <section id="reportes" class="surface-card profile-card" style="margin-top: 1.25rem;">
+                    <h3>Reportes</h3>
+                    <p>Solicitudes guardadas: <strong data-booking-count>0</strong></p>
+                    <p>Las reservas se conservan en este navegador y aparecen en la tabla de reservas.</p>
+                </section>
+
+                <section class="dashboard-grid">
+                    <article class="surface-card table-card">
+                        <div class="section-title">
+                            <h3>Reservas recientes</h3>
+                            <a href="#reservas">Ver todas</a>
+                        </div>
+                        <table id="reservas">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Servicio</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Pago</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bookings>
+                                <tr>
+                                    <td colspan="5" class="empty-state" data-empty-booking>Aún no hay solicitudes. Busca un servicio para crear una reserva.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+
+                    <article class="surface-card requests-card" id="solicitudes">
+                        <div class="section-title">
+                            <h3>Solicitudes de ejemplo</h3>
+                            <a href="publicar-servicio.html">Gestionar servicios</a>
+                        </div>
+                        <ul class="request-list">
+                            <li>
+                                <div>
+                                    <strong>Paquete de edición</strong>
+                                    <p>Cliente solicita cambio de horario</p>
+                                </div>
+                                <span class="status-chip chip-warning">Urgente</span>
+                            </li>
+                            <li>
+                                <div>
+                                    <strong>Prueba de instalación</strong>
+                                    <p>Se requiere revisión de equipo</p>
+                                </div>
+                                <span class="status-chip chip-info">Nuevo</span>
+                            </li>
+                            <li>
+                                <div>
+                                    <strong>Reserva de fin de semana</strong>
+                                    <p>Solicitud aprobada para confirmar</p>
+                                </div>
+                                <span class="status-chip chip-success">Listo</span>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rental Service Marketplace. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#privacidad">Privacidad</a>
+            <a href="#terminos">Términos</a>
+            <a href="#ayuda">Ayuda</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Publicar Servicio </title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>Rental Service Marketplace</h1>
+
+        <nav class="main-nav" aria-label="Navegación entre pantallas del prototipo">
+
+            <ul>
+
+                <li><a href="index.html">Portada</a></li>
+
+                <li><a href="login.html">Autenticación</a></li>
+
+                <li><a href="buscador.html">Buscador de Servicios</a></li>
+
+                <li><a href="dashboard.html">Dashboard</a></li>
+
+                <li><a href="perfil.html">Perfil del Proveedor</a></li>
+
+                <li><a href="publicar-servicio.html" class="active">Publicar Servicio</a></li>
+
+                <li><a href="pagos.html">Pagos / Checkout</a></li>
+
+                <li><a href="calificacion.html">Calificación</a></li>
+
+                <li><a href="admin.html">Administración</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="profile-page">
+        <section class="search-banner">
+
+            <h2>Publicar tu Servicio Domiciliario</h2>
+            <p>Completa el formulario para dar visibilidad a tu trabajo y atraer clientes potenciales</p>
+
+        </section>
+        <section class="profile-card surface-card">
+
+
+            <form id="formPublicarServicio">
+
+                <!-- Campo: Título del Servicio -->
+                <div class="form-group">
+                    <label for="tituloServicio">
+                        Título del Servicio <span class="asterisco" aria-label="Campo obligatorio">*</span>
+                    </label>
+                    <input type="text" id="tituloServicio" name="tituloServicio" class="text-field"
+                        placeholder="ej. Plomero Certificado 24/7" maxlength="100" required aria-required="true"
+                        aria-describedby="errorTituloServicio">
+                    <small class="form-hint">Máximo 100 caracteres</small>
+                    <div id="errorTituloServicio" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Categoría -->
+                <div class="form-group">
+                    <label for="categoria">
+                        Categoría <span class="asterisco" aria-label="Campo obligatorio">*</span>
+                    </label>
+                    <select id="categoria" name="categoria" class="text-field" required aria-required="true"
+                        aria-describedby="errorCategoria">
+                        <option value="">-- Selecciona una categoría --</option>
+                        <option value="plomeria">Plomería</option>
+                        <option value="electricidad">Electricidad</option>
+                        <option value="limpieza">Limpieza</option>
+                        <option value="jardineria">Jardinería</option>
+                        <option value="reparaciones">Reparaciones del Hogar</option>
+                        <option value="pintura">Pintura</option>
+                        <option value="carpinteria">Carpintería</option>
+                        <option value="tecnologia">Tecnología/Informática</option>
+                        <option value="mudanzas">Mudanzas y Logística</option>
+                        <option value="otro">Otro Servicio</option>
+                    </select>
+                    <div id="errorCategoria" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Precio Base -->
+                <div class="form-group">
+                    <label for="precioBase" class="form-label">
+                        Precio Base (COP) <span class="asterisco" aria-label="Campo obligatorio">*</span>
+                    </label>
+                    <div class="input-group">
+
+                        <input type="number" id="precioBase" name="precioBase" class="text-field" placeholder="$45.000"
+                                min="1000" step="1000" required aria-required="true"
+                            aria-describedby="errorPrecioBase hintPrecioBase">
+                    </div>
+                    <small id="hintPrecioBase" class="form-hint">Precio mínimo sugerido: $20.000 COP</small>
+                    <div id="errorPrecioBase" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Descripción -->
+                <div class="form-group">
+                    <label for="descripcion" class="form-label">
+                        Descripción del Servicio <span class="asterisco" aria-label="Campo obligatorio">*</span>
+                    </label>
+                    <textarea id="descripcion" name="descripcion" class="text-field"
+                        placeholder="ej. Especialista en fugas, tuberías y grifería. Disponible 24/7 con garantía en el trabajo."
+                        maxlength="500" rows="4" required aria-required="true"
+                        aria-describedby="errorDescripcion charCount"></textarea>
+                    <div class="char-counter">
+                        <small id="charCount">0/500 caracteres</small>
+                    </div>
+                    <div id="errorDescripcion" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Ciudad/Zona de Cobertura -->
+                <div class="form-group">
+                    <label for="ciudad" class="form-label">
+                        Ciudad/Zona de Cobertura <span class="asterisco" aria-label="Campo obligatorio">*</span>
+                    </label>
+                    <input type="text" id="ciudad" name="ciudad" class="text-field" placeholder="ej. Cali - Comuna 16"
+                        maxlength="100" required aria-required="true" aria-describedby="errorCiudad">
+                    <small class="form-hint">Especifica la ciudad y zona de atención</small>
+                    <div id="errorCiudad" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Disponibilidad -->
+                <div class="form-group">
+                    <label for="disponibilidad" class="form-label">
+                        Disponibilidad
+                    </label>
+                    <select id="disponibilidad" name="disponibilidad" class="text-field"
+                        aria-describedby="errorDisponibilidad">
+                        <option value="">-- Selecciona tu disponibilidad --</option>
+                        <option value="lunes-viernes">Lunes a Viernes</option>
+                        <option value="fines-semana">Fines de Semana</option>
+                        <option value="cualquier-dia">Cualquier Día</option>
+                        <option value="24-7">24/7</option>
+                    </select>
+                    <div id="errorDisponibilidad" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Campo: Años de Experiencia (Opcional) -->
+                <div class="form-group">
+                    <label for="experiencia" class="form-label">
+                        Años de Experiencia
+                    </label>
+                    <input type="number" id="experiencia" name="experiencia" class="text-field" placeholder="ej. 5"
+                        min="0" max="70" aria-describedby="errorExperiencia">
+                    <small class="form-hint">Campo opcional</small>
+                    <div id="errorExperiencia" class="error-message" role="alert"></div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-filled" aria-label="Publicar servicio">
+                        <span class="btn-icon">✓</span>
+                        Publicar Servicio
+                    </button>
+                </div>
+                <br>
+                <span>* Campos obligatorios</span>
+
+
+                <!-- Mensaje de Éxito -->
+                <div id="mensajeExito" class="alert alert-success" role="alert" style="display: none;">
+                    <strong>¡Excelente!</strong> Tu servicio ha sido publicado correctamente. Pronto recibirás
+                    solicitudes de clientes.
+                </div>
+            </form>
+
+
+        </section>
+        <!-- Sección de Servicios Publicados -->
+        <section class="surface-card profile-card">
+            <h3>Tus Servicios Publicados</h3>
+            <div id="serviciosPublicados" class="servicios-grid">
+                <p class="empty-state">No tienes servicios publicados aún. ¡Crea tu primer servicio!</p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Rental Service Marketplace.
+            Todos los derechos reservados.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#privacidad">Privacidad</a>
+
+            <a href="#terminos">Términos</a>
+
+            <a href="#ayuda">Ayuda</a>
+
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

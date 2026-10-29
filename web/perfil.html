@@ -1,0 +1,118 @@
+<!-- ==========================================================================
+   AUTOR: Jhon fredy quiroz gomez
+   FECHA: 12/07/2026
+   DESCRIPCIÓN:  Vista de Perfil Público y Reputación del Proveedor
+   ========================================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Perfil del Proveedor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Rental Service Marketplace</h1>
+        <nav class="main-nav" aria-label="Navegación del prototipo">
+            <ul>
+                <li><a href="index.html">Portada</a></li>
+                <li><a href="login.html">Autenticación</a></li>
+                <li><a href="buscador.html">Buscador de Servicios</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="perfil.html" class="active">Perfil del Proveedor</a></li>
+                <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+                <li><a href="pagos.html">Pagos / Checkout</a></li>
+                <li><a href="calificacion.html">Calificación</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-hero surface-card">
+            <div class="profile-hero__info">
+                <div class="profile-avatar">JP</div>
+                <div>
+                    <p class="profile-badge">Proveedor verificado</p>
+                    <h2>Juan Pablo Torres</h2>
+                    <p>Especialista en instalaciones, soporte técnico y mantenimiento para equipos audiovisuales.</p>
+                </div>
+            </div>
+            <div class="profile-score" id="rating-widget" data-rating="4.8" data-max="5" data-reviews="128">
+                <div>
+                    <span class="score-number" id="score-number">4.8</span>
+                    <div class="score-sub">
+                        <div id="stars" class="stars-row" aria-hidden="true">★★★★★</div>
+                        <p id="reviews-count">Basado en 128 reseñas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-grid">
+            <article class="surface-card profile-card">
+                <div class="section-title">
+                    <h3>Reputación del proveedor</h3>
+                    <span class="profile-badge">RF-03</span>
+                </div>
+
+                <div class="rating-bars">
+                    <div class="rating-row">
+                        <span>Calidad</span>
+                        <div class="bar"><div style="width: 95%"></div></div>
+                        <strong>4.9</strong>
+                    </div>
+                    <div class="rating-row">
+                        <span>Puntualidad</span>
+                        <div class="bar"><div style="width: 92%"></div></div>
+                        <strong>4.8</strong>
+                    </div>
+                    <div class="rating-row">
+                        <span>Comunicación</span>
+                        <div class="bar"><div style="width: 90%"></div></div>
+                        <strong>4.7</strong>
+                    </div>
+                    <div class="rating-row">
+                        <span>Profesionalismo</span>
+                        <div class="bar"><div style="width: 97%"></div></div>
+                        <strong>5.0</strong>
+                    </div>
+                </div>
+
+                <div class="chips-row" id="assist-chips">
+                    <span class="assist-chip assist-chip--verified">✓ Identidad verificada</span>
+                    <span class="assist-chip">⚡ Respuesta rápida</span>
+                    <span class="assist-chip assist-chip--verified">🛡️ Seguro</span>
+                    <span class="assist-chip">⭐ 10 años de experiencia</span>
+                </div>
+            </article>
+
+            <article class="surface-card profile-card">
+                <div class="section-title">
+                    <h3>Detalles del servicio</h3>
+                    <a href="buscador.html">Ver servicios y disponibilidad</a>
+                </div>
+                <ul class="detail-list">
+                    <li><strong>Ciudad:</strong> Bogotá</li>
+                    <li><strong>Rango de precio:</strong> $80.000 - $180.000</li>
+                    <li><strong>Tiempo promedio:</strong> 24 horas</li>
+                    <li><strong>Modalidad:</strong> Presencial y remoto</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rental Service Marketplace. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#privacidad">Privacidad</a>
+            <a href="#terminos">Términos</a>
+            <a href="#ayuda">Ayuda</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Service Marketplace - Pagos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Rental Service Marketplace</h1>
+        <nav class="main-nav" aria-label="Navegación del prototipo">
+            <ul>
+                <li><a href="index.html">Portada</a></li>
+                <li><a href="login.html">Autenticación</a></li>
+                <li><a href="buscador.html">Buscador de Servicios</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="perfil.html">Perfil del Proveedor</a></li>
+                <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+                <li><a href="pagos.html" class="active">Pagos / Checkout</a></li>
+                <li><a href="calificacion.html">Calificación</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="search-banner">
+            <h2>Resumen de pago</h2>
+            <p>Revisa los detalles del servicio y completa la compra con un método seguro.</p>
+        </section>
+
+        <section class="surface-card profile-card">
+            <p id="checkout-empty" class="empty-state">Todavía no has seleccionado un servicio. <a href="buscador.html">Busca un servicio</a> y pulsa “Ver detalles” para solicitarlo.</p>
+            <div id="checkout-summary" hidden>
+                <h3>Servicio solicitado</h3>
+                <div class="service-summary">
+                    <p><strong>Proveedor:</strong> <span id="checkout-provider"></span></p>
+                    <p><strong>Servicio:</strong> <span id="checkout-title"></span></p>
+                    <p><strong>Ciudad:</strong> <span id="checkout-city"></span></p>
+                    <p><strong>Valor:</strong> <span id="checkout-price"></span></p>
+                </div>
+                <p class="payment-notice">Esta demostración no realiza cobros. Al confirmar, guardarás una solicitud local de reserva.</p>
+            </div>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="payment-method">¿Cómo prefieres que te contacten?</label>
+                    <select id="payment-method" class="text-field" required>
+                        <option value="">Selecciona un medio de contacto</option>
+                        <option>WhatsApp</option>
+                        <option>Correo electrónico</option>
+                        <option>Llamada telefónica</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-filled">Enviar solicitud de reserva</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Rental Service Marketplace. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#privacidad">Privacidad</a>
+            <a href="#terminos">Términos</a>
+            <a href="#ayuda">Ayuda</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!-- ==========================================================================
+   AUTOR: Juan Esteban Bejarano Hernández
+   FECHA: 10/07/2026
+   DESCRIPCIÓN: Pantalla de calificación y feedback del servicio.
+   ========================================================================== -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rental Service Marketplace - Calificación del Servicio</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <h1>Rental Service Marketplace</h1>
+
+    <nav class="main-nav" aria-label="Navegación entre pantallas del prototipo">
+
+        <ul>
+
+            <li><a href="index.html">Portada</a></li>
+
+            <li><a href="login.html">Autenticación</a></li>
+
+            <li><a href="buscador.html">Buscador de Servicios</a></li>
+
+            <li><a href="dashboard.html">Dashboard</a></li>
+
+            <li><a href="perfil.html">Perfil del Proveedor</a></li>
+
+            <li><a href="publicar-servicio.html">Publicar Servicio</a></li>
+
+            <li><a href="pagos.html">Pagos / Checkout</a></li>
+
+            <li><a href="calificacion.html" class="active">Calificación</a></li>
+
+            <li><a href="admin.html">Administración</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="rating-container">
+
+    <section class="rating-banner">
+
+        <h2>Califica el servicio recibido</h2>
+
+        <p>
+
+            Tu opinión es importante para mejorar la calidad de los servicios
+            y ayudar a otros clientes a elegir el mejor profesional.
+
+        </p>
+
+    </section>
+
+    <section class="surface-card rating-card">
+
+        <h3>Información del servicio</h3>
+
+        <div class="service-summary">
+
+            <p><strong>Proveedor:</strong> Andrés Ramírez</p>
+
+            <p><strong>Servicio:</strong> Instalación eléctrica residencial</p>
+
+            <p><strong>Fecha:</strong> 09/07/2026</p>
+
+            <p><strong>Valor:</strong> $120.000 COP</p>
+
+        </div>
+
+        <hr>
+
+        <h3>Calificación</h3>
+
+        <form id="review-form">
+        <div class="stars" role="group" aria-label="Selecciona una calificación de una a cinco estrellas">
+            <button type="button" class="rating-star" data-rating aria-label="1 estrella" aria-pressed="false">★</button>
+            <button type="button" class="rating-star" data-rating aria-label="2 estrellas" aria-pressed="false">★</button>
+            <button type="button" class="rating-star" data-rating aria-label="3 estrellas" aria-pressed="false">★</button>
+            <button type="button" class="rating-star" data-rating aria-label="4 estrellas" aria-pressed="false">★</button>
+            <button type="button" class="rating-star" data-rating aria-label="5 estrellas" aria-pressed="false">★</button>
+        </div>
+
+        <div class="form-group">
+
+            <label for="experience">
+
+                ¿Cómo fue tu experiencia?
+
+            </label>
+
+            <select id="experience" class="text-field">
+
+                <option>Excelente</option>
+                <option>Muy buena</option>
+                <option>Buena</option>
+                <option>Regular</option>
+                <option>Mala</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="comments">
+
+                Comentarios
+
+            </label>
+
+            <textarea
+                id="comments"
+                class="text-field"
+                rows="6"
+                placeholder="Comparte tu experiencia con este proveedor..."></textarea>
+
+        </div>
+
+        <h3>Aspectos evaluados</h3>
+
+        <div class="rating-options">
+
+            <label class="checkbox-group">
+
+                <input type="checkbox" name="aspects" value="Puntualidad">
+
+                Puntualidad
+
+            </label>
+
+            <label class="checkbox-group">
+
+                <input type="checkbox" name="aspects" value="Calidad del trabajo">
+
+                Calidad del trabajo
+
+            </label>
+
+            <label class="checkbox-group">
+
+                <input type="checkbox" name="aspects" value="Atención al cliente">
+
+                Atención al cliente
+
+            </label>
+
+            <label class="checkbox-group">
+
+                <input type="checkbox" name="aspects" value="Relación calidad / precio">
+
+                Relación calidad / precio
+
+            </label>
+
+        </div>
+
+        <button type="submit" class="btn-filled">
+
+            Enviar Calificación
+
+        </button>
+        </form>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <p>
+
+        &copy; 2026 Rental Service Marketplace.
+        Todos los derechos reservados.
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#privacidad">Privacidad</a>
+
+        <a href="#terminos">Términos</a>
+
+        <a href="#ayuda">Ayuda</a>
+
+    </div>
+
+</footer>
+
+<script src="app.js"></script>
+</body>
+
+</html>
